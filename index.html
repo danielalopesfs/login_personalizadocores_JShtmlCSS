@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="fav/cores.ico" type="image/x-icon">
+    <title>Login personalizado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login">
+        <h2 id="txt">Login</h2>
+        <div class="boxInput">
+            <input type="text" placeholder="Nome do usuário">
+        </div>
+        <div class="boxInput">
+            <input type="password" placeholder="Senha">
+        </div>
+        <div class="boxInput">
+            <input type="submit" value="Login" id="btn">
+        </div>
+        <div class="grupo">
+            <a href="#">Esqueci minha senha</a>
+            <a href="#">Cadastre-se</a>
+        </div>
+    </div>
+    <div class="cores">
+        <span class="active" onclick="changeColor('#ff6b6b')" style="--clr:#ff6b6b;"></span>
+        <span class="active" onclick="changeColor('#d90429')" style="--clr:#d90429;"></span>
+        <span class="active" onclick="changeColor('#1dd1a1')" style="--clr:#1dd1a1;"></span>
+        <span class="active" onclick="changeColor('#bc6c25')" style="--clr:#bc6c25;"></span>
+        <span class="active" onclick="changeColor('#034078')" style="--clr: #034078;"></span>
+    </div>
+
+    <script>
+        let btn = document.getElementById('btn');
+        let texto = documento.getElementById('txt');
+
+        function changeColor(color) {
+            document.body.style.background = color;
+            btn.style.background = color;
+            txt.style.borderColor = color;
+
+            // marcar cor selecionada ativa
+            document.querySelectorAll('span').forEach(function(item){
+                item.classList.remove('active')
+            })
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

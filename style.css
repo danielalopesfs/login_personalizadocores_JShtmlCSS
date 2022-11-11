@@ -1,0 +1,103 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*background: #1dd1a1;*/
+    transition: 0.5s;
+}
+
+.login {
+    position: relative;
+    padding: 50px;
+    background: white;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 25px 50px rgb(0, 0, 0, 1);
+}
+
+.login h2 {
+    font-weight: 500;
+    border-left: 15px solid #1dd1a1;
+    line-height: 1em;
+    padding-left: 10px;
+    transition: 0.5s;
+    color: #333333;
+}
+
+.login .boxInput {
+    position: relative;
+}
+
+.login .boxInput input {
+    font-size: 16px;
+    color: #333333;
+    position: relative;
+    width: 100%;
+    padding: 10px 15px;
+    outline: none;
+    border: 1px solid #bfbaba;
+}
+
+.login .boxInput input#btn {
+    background: #1dd1a1;
+    color: whitesmoke;
+    font-size: 17.5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.login .grupo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login .grupo a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.login .grupo a:nth-child(2) {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.cores {
+    background: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    right: 0;
+}
+
+.cores span {
+    position: relative;
+    background: var(--clr);
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cores span.active {
+    border: 1px solid whitesmoke;
+    scale: 1.5;
+    transition: 0.5s;
+}
